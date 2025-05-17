@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Replace with your actual Google AI Studio API Key
-genai.configure(api_key="AIzaSyC1a3NFJEdbGEeUieru2Um3OwhWDD40APM")
+genai.configure(api_key="AIzaSyASqioKo3so2HB8axkEy4arpDNI2NzhtCE")
 
 # Initialize Gemini Model
 model = genai.GenerativeModel('gemini-1.5-pro')
