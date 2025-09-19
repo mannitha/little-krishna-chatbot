@@ -2,7 +2,24 @@ import streamlit as st
 import google.generativeai as genai
 
 # Replace with your actual Google AI Studio API Key
-genai.configure(api_key="AIzaSyDZoKa1Iv7Cq-aKoesUL8L0CGLH-76d43g")
+curl https://api.x.ai/v1/chat/completions \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer xai-8RhNF6PFSOBMVQxBJMolGGMhaOG5H4XfKxeKUrjPPcbQvSnwFebCV0Qs5x0gj2jN7NKKSUOJOegWeqlv" \
+    -d '{
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a test assistant."
+        },
+        {
+          "role": "user",
+          "content": "Testing. Just say hi and hello world and nothing else."
+        }
+      ],
+      "model": "grok-4-latest",
+      "stream": false,
+      "temperature": 0
+    }'
 
 # Initialize Gemini Model
 model = genai.GenerativeModel('gemini-1.5-pro')
